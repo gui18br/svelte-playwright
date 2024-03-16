@@ -10,6 +10,8 @@ $: ({ ListOfPeople } = data);
 
 <ul>
     {#each $ListOfPeople.data?.allPeople?.edges ?? [] as edge}
-        <li style={`background-color: ${edge?.node?.skinColor}`}>{edge?.node?.name}</li>
+        <li style={`background-color: ${edge?.node?.skinColor}`}>
+            <a href={`/people/${edge?.node?.id}`}>{edge?.node?.name}</a>
+        </li>
     {/each}
 </ul>
