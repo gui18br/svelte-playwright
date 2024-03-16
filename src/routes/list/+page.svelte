@@ -8,8 +8,8 @@ $: ({ ListOfPeople } = data);
 
 <h2>List</h2>
 
-{#each $ListOfPeople.data?.allPeople?.edges ?? [] as edge}
-    <div>
-        {edge?.node?.name}
-    </div>
-{/each}
+<ul>
+    {#each $ListOfPeople.data?.allPeople?.edges ?? [] as edge}
+        <li style={`background-color: ${edge?.node?.skinColor}`}>{edge?.node?.name}</li>
+    {/each}
+</ul>

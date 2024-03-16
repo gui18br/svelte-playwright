@@ -9,8 +9,8 @@ const config: PlaywrightTestConfig = {
 	use: {
 		trace: 'retain-on-failure'
 	},
-	testDir: 'tests',
-	testMatch: /(.+\.)?(test|spec)\.[jt]s/
+	testMatch: '**/*e2e.ts',
+	timeout: 2000
 };
 
 export default config;
