@@ -5,6 +5,10 @@ const config: PlaywrightTestConfig = {
 		command: 'npm run build && npm run preview',
 		port: 4173
 	},
+	reporter: [['list'], ['html']],
+	use: {
+		trace: 'retain-on-failure'
+	},
 	testDir: 'tests',
 	testMatch: /(.+\.)?(test|spec)\.[jt]s/
 };
